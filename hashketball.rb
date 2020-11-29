@@ -236,4 +236,4 @@ def winning_team
     end
   end
   if home_points > away_points
-    puts "Home "
+    puts "#{game_hash[:home][:team"
