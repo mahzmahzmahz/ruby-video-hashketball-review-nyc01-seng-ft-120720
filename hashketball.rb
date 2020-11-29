@@ -224,4 +224,4 @@ def winning_team
   away_points = 0 
   
   game_hash.each do |team, stats|
-    if stats
+    if team = :home
