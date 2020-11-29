@@ -226,4 +226,13 @@ def winning_team
   game_hash.each do |team, stats|
     if team = :home 
       stats[:players].each do |guys|
-        guys[:points] 
+        home_points += guys[:points]
+      end
+      
+    else 
+      stats[:players].each do |guys|
+        away_points += guys[:points]
+      end
+    end
+  end
+  
