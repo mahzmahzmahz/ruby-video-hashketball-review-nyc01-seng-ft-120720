@@ -239,3 +239,5 @@ def winning_team
     puts "The #{game_hash[:home][:team_name]} wins!"
   else
     puts "The #{game_hash[:away][:team_name]} wins!"
+  end
+end
