@@ -241,3 +241,20 @@ def winning_team
     puts "The #{game_hash[:away][:team_name]} wins!"
   end
 end
+
+def player_with_longest_name
+  longest_name = 0
+  player_longest_name = []
+  game_hash.each do |team, stats|
+    stats[:players].each do |guy|
+      if guy[:name.length] > longest_name
+        longest_name = guy[:name.length]
+        player_longest_name = guy[:name]
+      end
+    end
+  end
+  puts "#{player_longest_name} has the longest name. It is #{longest_name} letters long."
+end
+
+        
+    
