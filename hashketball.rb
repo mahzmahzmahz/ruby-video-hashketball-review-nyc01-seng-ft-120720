@@ -253,8 +253,27 @@ def player_with_longest_name
       end
     end
   end
-  puts "#{player_longest_name} has the longest name. It is #{longest_name} letters long."
+  #puts "#{player_longest_name} has the longest name. It is #{longest_name} letters long."
+  player_longest_name
 end
 
+def long_name_steals_a_ton?
+  player_with_longest_name
+  player_with_steals = []
+  most_steals = 0 
+  game_hash.each do |team, stats|
+    stats[:players].each do |guys|
+      if guys[:steals] > most_steals
+        most_steals = guys[:steals]
+        player_with_steals = guys[:player_name]
+      end
+    end
+  end
+  if player_longest_name = player_with_steals
+    return true 
+  end
+end
+
+  
         
     
