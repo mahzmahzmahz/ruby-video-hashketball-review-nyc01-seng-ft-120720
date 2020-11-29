@@ -219,8 +219,9 @@ def most_points_scored
   player_with_points
 end
 
-winning_team
+def winning_team
   home_points = 0 
   away_points = 0 
   
-  game_hash
+  game_hash.each do |team, stats|
+    if stats
