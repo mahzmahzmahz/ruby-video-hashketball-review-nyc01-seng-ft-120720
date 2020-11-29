@@ -218,3 +218,6 @@ def most_points_scored
   most_points
   player_with_points
 end
+
+winning_team
+  game_hash
